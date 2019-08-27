@@ -10,6 +10,13 @@ auth.set_access_token(keys.accessToken, keys.accessSecretToken)
 
 api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
-for tweet in public_tweets:
-    print(tweet.text)
+search = api.search(q="hello world", rpp="3", count="2", result_type="popular")
+
+# public_tweets = api.home_timeline()
+print(api.rate_limit_status())
+print("\n\n--------------\n\n")
+print(search)
+print("\n\n--------------\n\n")
+for query in search:
+    print(query.text)
+    print("\n")
