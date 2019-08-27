@@ -3,8 +3,6 @@ from credentials import *
 
 keys = Keys()
 
-import tweepy
-
 auth = tweepy.OAuthHandler(keys.APIKey, keys.APIsecret)
 auth.set_access_token(keys.accessToken, keys.accessSecretToken)
 
