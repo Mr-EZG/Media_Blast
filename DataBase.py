@@ -41,12 +41,12 @@ class DataBase(object):
 
 # example of how to update stuff
 
-if __name__ == "__main__":
-    base_columns = ["name", "country", "woeid"]
-    d1 = DataBase(config.woeid_dir, base_columns)
-    d1.reset()
-    d1.update_row({"name": "test", "woeid": 123, "country": "fam"})
-    print(d1.df)
-    d1.save()
-    base_columns = ["tweet", "user", "likes", "retweets"]
-    d2 = DataBase(config.database_dir, base_columns)
+# if __name__ == "__main__":
+#     base_columns = ["name", "country", "woeid"]
+#     d1 = DataBase(config.woeid_dir, base_columns)
+#     d1.reset()
+#     d1.update_row({"name": "test", "woeid": 123, "country": "fam"})
+#     print(d1.df)
+#     d1.save()
+#     base_columns = ["tweet", "user", "likes", "retweets"]
+#     d2 = DataBase(config.database_dir, base_columns)
